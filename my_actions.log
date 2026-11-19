@@ -1,0 +1,7 @@
+event_time	argument
+2026-11-19 12:00:35.026038	show databases
+2026-11-19 12:00:35.027299	show tables
+2026-11-19 12:00:35.030614	SELECT * FROM customers
+2026-11-19 12:00:35.980381	SELECT * FROM orders
+2026-11-19 12:00:57.066686	select @@version_comment limit 1
+2026-11-19 12:00:57.067039	SELECT event_time, argument FROM mysql.general_log WHERE command_type = 'Query' AND argument NOT LIKE 'SET %' AND argument NOT LIKE 'SHOW %' AND argument NOT LIKE 'SELECT @@%' AND argument NOT LIKE 'SELECT DATABASE()%'
